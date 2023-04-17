@@ -5,7 +5,7 @@ interface Props {
   addTask: (task: any) => void;
 }
 
-export default function CustomForm({ addTask }: Props) {
+const CustomForm: React.FC<Props> = ({ addTask }) => {
   const [task, setTask] = useState("");
 
   const handleFormSubmit: React.FormEventHandler<HTMLFormElement> = (
@@ -39,4 +39,6 @@ export default function CustomForm({ addTask }: Props) {
       </button>
     </form>
   );
-}
+};
+
+export default CustomForm;

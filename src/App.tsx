@@ -3,7 +3,7 @@ import { useState } from "react";
 import CustomForm from "./components/CustomForm";
 import TaskList from "./components/TaskList";
 
-export default function App(): JSX.Element {
+const App = () => {
   const [tasks, setTasks] = useState<string[]>([]);
   const addTask = (task: string) => {
     setTasks((prevState) => [...prevState, task]);
@@ -18,4 +18,6 @@ export default function App(): JSX.Element {
       {tasks && <TaskList tasks={tasks} />}
     </div>
   );
-}
+};
+
+export default App;

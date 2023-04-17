@@ -12,7 +12,7 @@ interface Props {
   task: any;
 }
 
-export default function TaskItem({ task }: Props) {
+const TaskItem: React.FC<Props> = ({ task }) => {
   const [isChecked, setIsChecked] = useState<boolean>(task.checked);
 
   const handleCheckboxChange: React.ChangeEventHandler<HTMLInputElement> = (
@@ -56,4 +56,6 @@ export default function TaskItem({ task }: Props) {
       </div>
     </li>
   );
-}
+};
+
+export default TaskItem;

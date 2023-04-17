@@ -8,7 +8,7 @@ interface Props {
   tasks: any[];
 }
 
-export default function Tasklist({ tasks }: Props) {
+const Tasklist: React.FC<Props> = ({ tasks }) => {
   return (
     <ul className={styles.tasks}>
       {tasks
@@ -18,4 +18,6 @@ export default function Tasklist({ tasks }: Props) {
         ))}
     </ul>
   );
-}
+};
+
+export default Tasklist;
